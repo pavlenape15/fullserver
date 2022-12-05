@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+footer{
+
+    top: 1700px;
+
+    background-color: #828282;
+     
+    position: absolute;
+    
+    display: inline-block;
+
+    bottom: 0;
+
+    background: #393e46;
+
+    color: #fff;
+
+    padding: 10 0px 0 30px;
+
+    font-size: 14px;
+
+    line-height: 20px;
+
+}
+
+
+
+.color_X
+
+{
+
+    color: #00adb5;
+
+}
+
+
+
+h2{
+
+    color: #eeeeee;
+
+    font-size: 24px;
+
+}
+
+
+
+#font
+
+{
+
+    font-family: 'Josefin Sans', sans-serif;
+
+
+
+}
+
+
+
+.row{
+
+    width: 85%;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+}
+
+.col{
+
+    flex-basis:  27%;
+
+    padding: 10px;
+
+    margin-top: 70px;
+
+}
+
+
+
+ .col:nth-child(2), .col:nth-child(3){
+
+    flex-basis: 15%;
+
+}
+
+.col h3{
+
+    width: fit-content;
+
+    position: relative;
+
+    margin-bottom: 36px;
+
+}
+
+h4{
+
+    margin-top: 20px;
+
+}
+
+
+
+#it_step_footer
+
+{
+
+    margin-top: 60px;
+
+}
+
+
+
+#it_step_footer h2
+
+{
+
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+
+
+.email{
+
+    width:fit-content;
+
+     border-bottom: 1px solid #ccc;
+
+    margin: 20px 0 ;
+
+}
+
+ul li{
+
+    list-style: none;
+
+    margin-bottom: 14px;
+
+}
+
+ul li a{
+
+    text-decoration: none;
+
+    color: #fff;
+
+}
+
+ul li a:hover{
+
+    opacity: 0.3;
+
+}
+
+form{
+
+    padding-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #fff;
+
+    margin-bottom: 50px;
+
+
+
+
+}
+
+
+
+form input{
+
+    width: 100%;
+
+    background: transparent;
+
+    color: #00adb5;
+
+    border:0;
+
+    outline: none;
+
+}
+
+.icons span{
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    font-size: x-large;
+
+    color: rgb(11, 24, 47);
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+}
+
+
+
+.line
+
+{
+
+    width: 100%;
+
+    height: 1px;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.p
+
+{
+
+    margin-top: 35px;
+
+}
+
+
+
+
+/* @keyframes AnimationName {
+
+    0%{background-position:100% 50%}
+
+    50%{background-position:0% 50%}
+
+    100%{background-position: 50% 100%}
+
+} */
+
+
+
+.copyright{
+
+    text-align: center;
+
+    width: 100%;
+
+    border-top: 1px solid #eeeeee;
+
+}
+
+.underline{
+
+    width: 100%;
+
+    height: 5px;
+
+    background-color: #00adb5;
+
+    border-radius: 3px;
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 0;
+
+}
+
+.underline span{
+
+    width: 15px;
+
+    height: 100%;
+
+   border-radius: 3px;
+
+   color: rgb(180, 149, 149);
+
+   position: absolute;
+
+   top: 0;
+
+   left: 10px;
+
+   animation: moving 2s linear infinite;
+
+}
+
+@keyframes moving{
+
+    0%{
+
+        left: -20px;
+
+    }
+
+    100%{
+
+        left: 100%;
+
+    }
+
+}
+
+
+
+.email_send
+
+{
+
+    width: 65px;
+
+    background-color: #ccc;
+
+    border: none;
+
+}
+
+#bolo
+
+{
+
+    color: #eeeeee;
+
+}
+
+
+
+
+.send_btm
+
+{
+
+    position: relative;
+
+}
+
+
+
+.send_btm button
+
+{
+
+    position: absolute;
+
+    left: 0;
+
+    top: 40px;
+
+    height: 31px;
+
+    border-radius: 3px;
+
+    background-color: #ccc;
+
+    width: 100%;
+
+}
+
+
+
+.send_btm button:active
+
+{
+
+    background-color: #828282;
+
+}
+
+
+
+.send_btm button i
+
+{
+
+    color: #393e46;
+
+    font-size: 16px;
+
+}
+
+h2 a{
+
+text-decoration: none;
+
+color: #ccc;
+
+
+
+}

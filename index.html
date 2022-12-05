@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+       <link rel="stylesheet" href="./footer.css">
+    <!-- Demo styles -->
+    <style>
+
+
+
+.Trending
+      {
+        font-size: 55px;
+        margin-left: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        color: white;
+        width: 100%;
+        background-color: black;
+        padding: 30px 30px;
+        border-radius: 30px;
+      }
+      
+
+.moviebackround
+      {
+        height: 750px;
+        width: 1000px;
+        background-color: black;
+        border-radius: 30px;
+        padding: auto;
+        border: solid 30px;
+      }
+
+
+         .backround
+     {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.797);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    display: none;
+ }
+
+
+ #player
+ {
+  border-radius: 30px;
+ }
+
+.content
+{
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 1000;
+    background-color: black;
+    border-radius: 10px;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.content .links
+{
+    height: 419px;
+    width: 100%;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid white;
+
+
+}
+
+
+.backround-display
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-display
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+#content-close
+{
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    display: contents;
+
+}
+      html,
+      body {
+        position: relative;
+        height: 100%;
+        overflow-x: hidden;
+        background-color: rgb(34, 40, 49);
+
+      }
+
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 90%;
+        height: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-radius: 50px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .slider2 img
+      {
+        border-radius: 30px;
+      }
+
+
+
+
+      .slider3 img
+      {
+        border-radius: 30px;
+      }
+
+  
+
+    
+
+    .links 
+    {
+        height: 300px;
+        width: 300px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .streaming-links
+    {
+      display: flex;
+      flex-direction: column;
+        gap: 60px;
+    }
+
+    .streaming-div
+    {
+      background-color: aqua;
+      width: 100%;
+      height: 300px;
+    }
+
+    .links h1
+ {
+    color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.streaming-links {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+
+  .streaming
+  {
+    color: white;
+  }
+  
+  .streaming-div {
+    color: white;
+    background-color: #260012;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid;
+    color: white;
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <nav>
+        <ul class="logo1">
+            <li class="logo"><button class="XMOVIES"><img src="./red_logo__-removebg-preview.png" class="nav_image"><span>MOVIES</span></button></li>
+        </ul>
+      <div>
+        <ul class="items">
+            <li>
+                    <button class="dropdownbutton btn"type="button" aria-haspopup="true" aria-expanded="true" aria-controls="dropdown1" >
+                      Genres<span class="arrow"></span>   
+                    </button>
+                <!-- <ul class="dropdown" id="dropdown1">
+                  <li><a href="/index.html" ><button class="btn"> Action </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> Detective </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> Horror </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> adventure </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> Comedy </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> Romance </button></a></li>
+                  <li><a href="/index.html" ><button class="btn"> Fantasy </button></a></li>
+                </ul> -->
+                    </li>
+                          <li class="# 2"><button class="btn"> Realese Date</button></li>
+                          <li class="# 3"><button class="btn">IMBD Rating</button></li>
+                          <li class="# 3"><button class="btn">Country</button></li>
+                    <li>
+    
+                    <div class="searchBox">
+    
+                    <input class="searchInput"type="text" name="" placeholder="Search">
+    
+                    <button class="searchButton" href="#">
+    
+                      <i class="material-icons">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                      </i>
+    
+                    </button>
+                  <script src="./app.js"></script>
+                  </div>
+                </li>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+      </div>
+    </nav>
+    
+`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    <section id="slider">
+        <div class="swiper FlashSwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="./Flash Banner.jfif" alt=""></div>
+              <div class="swiper-slide"><img src="./black addam.jfif" alt=""></div>
+              <div class="swiper-slide"><img src="./wednesday.jpg" alt=""></div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+          </div>
+    </section>
+
+
+
+    <h1 class="Trending">Popular </h1>
+
+
+      <div class="mySwiper2 slider2">
+        <div class="swiper-wrapper">
+            
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+          <div class="backround">
+            <div class="moviebackround">
+
+            </div>2
+            
+          </div>
+      </div>
+      <h1 class="Trending">Trending </h1>
+
+
+      <div class="mySwiper3 slider3">
+        <div class="swiper-wrapper">
+            
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+          <div class="backround">
+              <div class="moviebackround">
+            </div>
+          </div>
+      </div>
+
+<!--   
+      <footer>
+        <div class="row">
+        <div class="col" id="it_step_footer">
+         <h2> <a href=" https://itstep.org/">IT Step</a> <span class="color_X">X</span> <a href="https://www.lenovo.com/us/en/?orgRef=https%253A%252F%252Fwww.google.com%252F">Lenovo</a> </h2>
+         <h4>ABOUT US</h4>
+         <p class="p"> What we want to achieve is make your life easier by reducing the
+          +x1 time needed to find and enjoy the show. 
+            This is why we decided to create a platform dedicated to discovering new shows
+             which will include links to streaming services where you can watch them.
+            We are a team of passionate and hardworking students trying to learn and improve
+             our technical skills in order to deliver solutions improving your quality of life and we are not going to stop not even when we reach our limits </p>
+          </div>
+        <div class="col"> 
+         <h3 id="font"  > INFO <div class="underline"><span> </span></div></h3>
+         <p>Kavtaradze,34 </p>
+         <h4>call: 599867954</h4>
+         <p class="email">mariko.qvlividze69@gmail.com</p>
+        </div>
+
+       
+        <div class="col">
+         <h3 id="font">SOCIALS<div class="underline"><span> </span></div></h3>
+         <ul>
+           <li><a href="https://www.facebook.com/  "><i class="fa-brands fa-square-facebook"></i> Facebook  </a> </li>
+           <li><a href="https://twitter.com/home "> <i class="fa-brands fa-square-twitter"></i> Twitter </a> </li>
+           <li><a href=" https://www.instagram.com/  "> <i class="fa-brands fa-square-instagram"></i> Instagram </a></li>
+           
+         </ul>
+     
+          </div>
+        <div class="col">
+         <h3 id="font">RECOMENDATION<div class="underline"><span> </span></div></h3>
+         <form class="send_btm">
+             <input type="recomendation" placeholder="advice" required>
+             <button type="send" class="email_send"><i class="fa-solid fa-envelope"></i></button>
+ 
+         </form>
+         
+          <div class="icons">
+              <span class="fa"><i class="fa-brands fa-facebook" id="bolo"></i></span>
+             <span class="fa"><i class="fa-brands fa-twitter" id="bolo"></i></span> 
+              <span class="fa"><i class="fa-brands fa-instagram" id="bolo"></i> </span>
+             </div>
+      </div>
+      
+     </div>
+
+    
+     <p class="copyright"> © 2022 Inc.</p>
+ 
+     </footer>  -->
+
+
+    <!-- Swiper JS -->
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+
+      });
+
+      var swiper3 = new Swiper(".FlashSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+
+        
+    })
+
+    var swiper4 = new Swiper(".mySwiper3", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+    })
+
+
+    </script>
+    
+  </body>
+</html>
